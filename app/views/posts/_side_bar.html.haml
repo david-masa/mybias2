@@ -1,1 +1,26 @@
-saido
+.chat-side
+  .side-header
+    .side-header__box
+      %p.side-header__box__user-name
+        Let's Introduce My Bias!!
+        私の推しメン紹介します！！
+      %ul.side-header__box__menu
+        %li.side-header__box__menu__new-group
+          = link_to "#" do
+            = icon('far', 'edit',class: "icon")
+        %li.side-header__box__menu__edit-user
+          = link_to "#" do
+            = icon('fas', 'cog',class: "icon")
+
+  .groups
+    .group
+      %p.group__group-name
+        techcamp
+      %p.group__latest-message
+        まだメッセージがありません
+    .group
+      %p.group__group-name
+        techcamp
+      %p.group__latest-message
+        まだメッセージがありません
+
