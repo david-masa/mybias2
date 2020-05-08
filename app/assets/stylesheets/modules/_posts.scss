@@ -15,8 +15,13 @@
       height: 200px;
       background-color: $color2;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       padding: 0 20px;
+
+      &__title{
+        font-size: 24px;
+        margin: 20px auto;
+      }
 
       &__box{
         height: 20px;
@@ -65,44 +70,37 @@
       height: 200px;
       background-color: $color9;
       padding: 20px 40px;
+      display: flex;
+      flex-direction: column;
 
       .input-box{
         height: 50px;
         width: 100%;
         display: flex;
-        position: relative;
+        flex-direction: column;
 
 
-        &__text{
-          height: 50px;
+        &__reason{
+          height: 75px;
           width: 100%;
-          padding: 0 40px 0 10px;
           border-style: none;
+          margin: 20px auto;
         }
 
-        &__image{
-          position: absolute;
-          font-size: 1.3rem;
-          top: 10px;
-          right: 125px;
-          cursor: pointer;
-          box-sizing: border-box;
-          color: red;
-
-          &__file{
-            display: none;
-          }
+        &__url{
+          height: 75px;
+          width: 100%;
+          border-style: none;
         }
       }
       
       .submit-btn{
-        margin-left: 15px;
-        padding: 0 30px;
-        width: 100px;
+        width: 100%;
         height: 50px;
         background-color: $color6;
         cursor: pointer;
         color: $color1;
+        margin: 20px auto;
       }
     }
         
