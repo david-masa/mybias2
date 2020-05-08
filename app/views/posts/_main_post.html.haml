@@ -2,10 +2,9 @@
   .form
     %form
       .input-box
-        %input{type:"text", class:"input-box__text", placeholder:"type a reason"}
-          %label{class: "input-box__image"}
-            = icon('fab', 'youtube-square')
-            %input{type: "file", class:"input-box__image__file"}
+        紹介したいYoutube内のMVのURLと選出理由を書いてね！
+        %input{type:"text", class:"input-box__reason", placeholder:"type a reason"}
+        %input{type:"text", class:"input-box__url", placeholder:"type a URL"}
         %input{type:"submit", class:"submit-btn",value:"Send"}
 
 
