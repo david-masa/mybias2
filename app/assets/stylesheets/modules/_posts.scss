@@ -34,16 +34,15 @@
         display: flex;
         justify-content: space-between;
         font-size: 16px;
-        color: blue;
 
         ul{
           display: flex;
           flex-direction: row;
 
           .icon{
-            color: red;
             text-decoration: none;
             margin-left: 5px;
+            color: $color1;
           }
         }
       }
