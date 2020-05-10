@@ -56,13 +56,19 @@
       .genre{
         padding: 20px 20px 40px;
 
-        &__group-name{
-          font-size: 15px;
-          margin-bottom: 5px;
+        a{
+          text-decoration: none;
         }
 
-        &__latest-message{
+        &__genre-name{
+          font-size: 15px;
+          margin-bottom: 5px;
+          color: $color1;
+        }
+
+        &__latest-post{
           font-size: 11px;
+          color: $color1;
         }
       }
     }
