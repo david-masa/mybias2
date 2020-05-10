@@ -1,41 +1,33 @@
 .chat-main
+
+  .main-header
+    .main-header__left-box
+      %h.main-header__left-box__current-group
+        ジャンル：K-POP
+      %h.main-header__left-box__member-list
+        Member：masa
+    .main-header__edit-btn
+      = link_to "#", class:"btn" do
+        Edit
+
   .form
     %form
       .input-box
-        紹介したいYoutube内のMVのURLと選出理由を書いてね！
+        紹介したいMVと選出理由を書いてね！
         %input{type:"text", class:"input-box__reason", placeholder:"type a reason"}
-        %input{type:"text", class:"input-box__url", placeholder:"type a URL"}
+          %label{class: "input-box__image"}
+            = icon('far', 'file-video')
+            %input{type: "file", class:"input-box__image__file"}
         %input{type:"submit", class:"submit-btn",value:"Send"}
 
 
   .posts
     .post
-      %h.post__rank
-        1位
-      %h.post__thumbnail
-      = image_tag('wannabe.jpg', options = {alt: 'wannabe', height: '112.5px', width: '200px', class: ''})
-      .data
-        %p.data__title
-          タイトル:  ITZY "WANNABE" M/V
-        %p.data__view
-          再生回数:  115,397,546  回
-        %p.data__reason
-          選出理由:  ただ可愛いだけではなく、ダンスもキレッキレっで、歌詞もポジティブなので好きです。
-        %p.data__name
-          投稿者:  masa
-
-    .post
-      %h.post__rank
-        2位
-      %h.post__thumbnail
-      = image_tag('wannabe.jpg', options = {alt: 'wannabe', height: '112.5px', width: '200px', class: ''})
-      .data
-        %p.data__title
-          タイトル:  ITZY "WANNABE" M/V
-        %p.data__view
-          再生回数:  115,397,546  回
-        %p.data__reason
-          選出理由:  ただ可愛いだけではなく、ダンスもキレッキレっで、歌詞もポジティブなので好きです。
-        %p.data__name
-          投稿者:  masa
-
+      .post__upper-info
+        %p.post__upper-info__talker
+          masa
+        %p.post__upper-info__date
+          2019/11/20(Wed) 17:43:01 
+      %p.post__text
+        選出理由:  ただ可愛いだけではなく、ダンスもキレッキレっで、歌詞もポジティブなので好きです。
+        = image_tag('wannabe.jpg', options = {alt: 'wannabe', height: '112.5px', width: '200px', class: 'mv'})

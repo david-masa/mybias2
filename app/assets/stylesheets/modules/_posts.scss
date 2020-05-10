@@ -48,12 +48,12 @@
       }
     }
 
-    .languages{
+    .genres{
       width: 300px;
       height: calc(100vh - 100px);
       background: rgb(10, 87, 150);
 
-      .language{
+      .genre{
         padding: 20px 20px 40px;
 
         &__group-name{
@@ -71,9 +71,53 @@
   .chat-main{
     width: calc(100vw - 300px);
 
+    .main-header{
+      height: 50px;
+      background-color: #063358;
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+
+      &__left-box{
+        display: flex;
+        justify-content: space-between;
+        width: calc(100vw - 300px - 110px);
+        
+        &__current-group{
+          font-size: 30px;
+          color: $color1;
+          margin: auto 0;
+        }
+
+        &__member-list{
+          margin: auto 20px;
+          font-size: 12px;
+          color: $color5;
+        }
+      }
+
+      &__edit-btn{
+        font-size: 16px;
+        border: solid 1px $color6;
+        padding: 0 20px;
+        height: 40px;
+        line-height: 40px;
+        width: 70px;
+        list-style: none;
+        margin: auto 0;
+
+        .btn{
+          text-decoration: none;
+          color: $color6;
+        }
+      }
+    }
+
+
     .form{
-      height: 200px;
-      background-color: $color9;
+      height: 150px;
+      background-image: url("#{asset_path('kachinko.png')}");
+      background-size: cover;
       padding: 20px 40px;
       display: flex;
       flex-direction: column;
@@ -83,26 +127,34 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+        position: relative;
 
 
         &__reason{
-          height: 75px;
+          height: 50px;
           width: 100%;
+          padding: 0 40px 0 10px;
           border-style: none;
-          margin: 20px auto;
         }
 
-        &__url{
-          height: 75px;
-          width: 100%;
-          border-style: none;
+        &__image{
+          position: absolute;
+          font-size: 1.3rem;
+          top: 20px;
+          right: 25px;
+          cursor: pointer;
+          box-sizing: border-box;
+
+          &__file{
+            display: none;
+          }
         }
       }
       
       .submit-btn{
         width: 100%;
         height: 50px;
-        background-color: $color6;
+        background-color: transparent;
         cursor: pointer;
         color: $color1;
         margin: 20px auto;
@@ -116,37 +168,35 @@
       display: flex;
       flex-direction: column;
 
-      .post{
-        display: flex;
-        justify-content: flex-start;
-        height: 15vh;
-        width: calc(100vw - 300px);
-
-        &__rank{
-          font-size: 30px;
-        }
-
-        &__thumbnail{
-        }
-
-        .data{
-          font-size: 16px;
-
-
-          &__title{
-
+      .posts{
+        height: calc(100vh - 100px - 90px);
+        background-color: $color7;
+        padding: 35px 40px 0;
+  
+        .post{
+          .post__upper-info{
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 12px;
+  
+            &__talker{
+              font-size: 16px;
+              color: $color4;
+            }
+  
+            &__date{
+              font-size: 12px;
+              color: $color5;
+            }
           }
-
-          &__view{
-          }
-
-          &__reason{
-
+  
+          &__text{
+            margin-bottom: 46px;
+            font-size: 14px;
+            color: $color8;
           }
         }
       }
-    }
+      }
   }
 }
-
-
