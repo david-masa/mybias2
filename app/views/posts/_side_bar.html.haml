@@ -13,48 +13,10 @@
           = link_to edit_user_path(current_user) do
             = icon('fas', 'cog', class: 'icon')
   .genres
-    .genre
-      %p.genre__group-name
-        English
-      %p.genre__latest-message
-        まだメッセージがありません
-    .genre
-      %p.genre__group-name
-        한국
-      %p.genre__latest-message
-        まだメッセージがありません
-    .genre
-      %p.genre__group-name
-        日本語
-      %p.genre__latest-message
-        まだメッセージがありません
-    .genre
-      %p.genre__group-name
-        中文
-      %p.genre__latest-message
-        まだメッセージがありません
-    .genre
-      %p.genre__group-name
-        ภาษาไทย
-      %p.genre__latest-message
-        まだメッセージがありません
-    .genre
-      %p.genre__group-name
-        हिंदी
-      %p.genre__latest-message
-        まだメッセージがありません
-    .genre
-      %p.genre__group-name
-        اللغة العربية
-      %p.genre__latest-message
-        まだメッセージがありません
-    .genre
-      %p.genre__group-name
-        русский язык
-      %p.genre__latest-message
-        まだメッセージがありません
-    .genre
-      %p.genre__group-name
-        その他
-      %p.genre__latest-message
-        まだメッセージがありません
+    - current_user.genres.each do |genre|
+      .genre
+        = link_to '#' do
+          .genre__genre-name
+            = genre.name
+          .genre__latest-post
+            メッセージはまだありません。
