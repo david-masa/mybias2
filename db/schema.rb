@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200510061644) do
+ActiveRecord::Schema.define(version: 20200511014435) do
 
   create_table "genre_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "genre_id"
@@ -26,6 +26,18 @@ ActiveRecord::Schema.define(version: 20200510061644) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_genres_on_name", unique: true, using: :btree
+  end
+
+  create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text     "reason",     limit: 65535
+    t.string   "url"
+    t.string   "video"
+    t.integer  "genre_id"
+    t.integer  "user_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["genre_id"], name: "index_posts_on_genre_id", using: :btree
+    t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -44,4 +56,6 @@ ActiveRecord::Schema.define(version: 20200510061644) do
 
   add_foreign_key "genre_users", "genres"
   add_foreign_key "genre_users", "users"
+  add_foreign_key "posts", "genres"
+  add_foreign_key "posts", "users"
 end

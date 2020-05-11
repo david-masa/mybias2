@@ -11,16 +11,16 @@
         Edit
 
   .form
-    %form
+    = form_for [@genre, @post] do |f|
       .input-box
         紹介したいMVと選出理由を書いてね！
-        %input{type:"text", class:"input-box__reason", placeholder:"type a reason"}
-          %label{class: "input-box__image"}
-            = icon('far', 'file-video')
-            %input{type: "file", class:"input-box__image__file"}
-        %input{type:"submit", class:"submit-btn",value:"Send"}
-
-
+        = f.text_field :reason, class: 'input-box__reason', placeholder: 'type a reason'
+        = f.label :video, class: 'input-box__image' do
+          = icon('far', 'file-video')
+          = f.file_field :video, class: 'input-box__image__file'
+        = f.text_field :url, class:"input-boc__url", placeholder:"type a url"
+        = f.submit 'Send', class: 'submit-btn'
+        
   .posts
     .post
       .post__upper-info
