@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :genre_users
   has_many :genres, through: :genre_users
+  has_many :posts
 end
