@@ -24,7 +24,7 @@ class GenresController < ApplicationController
   def update
     @genre = Genre.find(params[:id])
     if @genre.update(genre_params)
-      redirect_to root_path, notice: 'グループを更新しました'
+      redirect_to genre_posts_path(@genre), notice: 'グループを更新しました'
     else
       render :edit
     end

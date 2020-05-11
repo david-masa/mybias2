@@ -18,16 +18,8 @@
         = f.label :video, class: 'input-box__image' do
           = icon('far', 'file-video')
           = f.file_field :video, class: 'input-box__image__file'
-        = f.text_field :url, class:"input-boc__url", placeholder:"type a url"
+        = f.text_field :youtube_url, class:"input-boc__url", placeholder:"type a url"
         = f.submit 'Send', class: 'submit-btn'
         
   .posts
-    .post
-      .post__upper-info
-        %p.post__upper-info__talker
-          masa
-        %p.post__upper-info__date
-          2019/11/20(Wed) 17:43:01 
-      %p.post__text
-        選出理由:  ただ可愛いだけではなく、ダンスもキレッキレっで、歌詞もポジティブなので好きです。
-        = image_tag('wannabe.jpg', options = {alt: 'wannabe', height: '112.5px', width: '200px', class: 'mv'})
+    = render @posts
