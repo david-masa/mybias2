@@ -10,7 +10,7 @@ class PostsController < ApplicationController
     @post = @genre.posts.new(post_params)
     
     if @post.save
-      redirect_to genre_posts_path(@genre), notice: 'メッセージが送信されました'
+      redirect_to genre_posts_path(@genre), notice:'メッセージが送信されました'
     else
       @posts = @genre.posts.includes(:user)
       flash.now[:alert] = 'メッセージを入力してください。'
@@ -21,7 +21,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:content, :image).merge(user_id: current_user.id)
+    params.require(:post).permit(:reason, :youtube_url, :video).merge(user_id: current_user.id)
   end
 
   def set_genre

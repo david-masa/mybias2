@@ -29,13 +29,13 @@ ActiveRecord::Schema.define(version: 20200511014435) do
   end
 
   create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text     "reason",     limit: 65535
-    t.string   "url"
+    t.text     "reason",      limit: 65535
+    t.string   "youtube_url"
     t.string   "video"
     t.integer  "genre_id"
     t.integer  "user_id"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.index ["genre_id"], name: "index_posts_on_genre_id", using: :btree
     t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
   end

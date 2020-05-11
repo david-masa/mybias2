@@ -1,0 +1,14 @@
+.posts
+  .post
+    .post__upper-info
+      %p.post__upper-info__talker
+        = post.user.name
+      %p.post__upper-info__date
+        = post.created_at.strftime("%Y年%m月%d日 %H時%M分")
+    %p.post__text
+      - if post.reason.present?
+        %p.post__text__reason
+          = post.reason
+        %p.post__text__youtube_url
+          = post.youtube_url
+      = video_tag post.video.url, class: 'lower-post__video' if post.video.present?

@@ -15,7 +15,7 @@
   .genres
     - current_user.genres.each do |genre|
       .genre
-        = link_to '#' do
+        = link_to genre_posts_path(genre) do
           .genre__genre-name
             = genre.name
           .genre__latest-post

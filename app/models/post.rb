@@ -4,5 +4,5 @@ class Post < ApplicationRecord
 
   validates :reason, presence: true, unless: :video?
 
-  mount_uploader :image, ImageUploader
+  mount_uploader :video, ImageUploader
 end
