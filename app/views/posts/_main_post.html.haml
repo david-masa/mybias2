@@ -15,9 +15,9 @@
       .input-box
         紹介したいMVと選出理由を書いてね！
         = f.text_field :reason, class: 'input-box__reason', placeholder: 'type a reason'
-        = f.label :video, class: 'input-box__image' do
-          = icon('far', 'file-video')
-          = f.file_field :video, class: 'input-box__image__file'
+        -# = f.label :video, class: 'input-box__image' do
+        -#   = icon('far', 'file-video')
+        -#   = f.file_field :video, class: 'input-box__image__file'
         = f.text_field :youtube_url, class:"input-boc__url", placeholder:"type a url"
         = f.submit 'Send', class: 'submit-btn'
         

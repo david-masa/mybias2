@@ -9,6 +9,10 @@ class PostsController < ApplicationController
   def create
     @post = @genre.posts.new(post_params)
     
+    url = params[:post][:youtube_url]
+    url = url.last(11)
+    @post.youtube_url = url
+
     if @post.save
       redirect_to genre_posts_path(@genre), notice:'メッセージが送信されました'
     else

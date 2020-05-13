@@ -10,5 +10,5 @@
         %p.post__text__reason
           = post.reason
         %p.post__text__youtube_url
-          = post.youtube_url
-      = video_tag post.video.url, class: 'lower-post__video' if post.video.present?
+          %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "315", :src => "https://www.youtube.com/embed/#{post.youtube_url}", :width => "560"}
+      -# = video_tag post.video.url, class: 'lower-post__video' if post.video.present?
