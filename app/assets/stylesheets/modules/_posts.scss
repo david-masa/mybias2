@@ -51,7 +51,10 @@
     .genres{
       width: 300px;
       height: calc(100vh - 100px);
-      background: rgb(10, 87, 150);
+      // background: rgb(10, 87, 150);
+      background-image: url("newyork.png");
+      background-size:cover;
+
 
       .genre{
         padding: 20px 20px 40px;
@@ -124,7 +127,7 @@
       height: 150px;
       background-image: url("#{asset_path('kachinko.png')}");
       background-size: cover;
-      padding: 20px 40px;
+      padding: 5px 40px;
       display: flex;
       flex-direction: column;
 
@@ -135,12 +138,16 @@
         flex-direction: column;
         position: relative;
 
+        &__url{
+          height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
+        }
 
         &__reason{
           height: 50px;
           width: 100%;
           padding: 0 40px 0 10px;
-          border-style: none;
         }
 
         &__image{
@@ -163,7 +170,7 @@
         background-color: transparent;
         cursor: pointer;
         color: $color1;
-        margin: 20px auto;
+        margin: 10px auto;
       }
     }
         

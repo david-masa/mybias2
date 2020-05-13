@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @post = Post.new
-    @posts = @genre.posts.includes(:user)
+    @posts = @genre.posts.includes(:user).order("created_at DESC")
   end
 
   def create
