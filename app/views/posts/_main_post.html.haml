@@ -17,7 +17,7 @@
       .input-box
         紹介したいYoutubeのURLと、選出理由を書いてね！
         %br
-        (YoutubeのURLは、再生リストに入っているものの場合、正常に読み込めない場合がございます。)
+        (YoutubeのURLは、末尾が"="以下11桁のURLをご利用ください。)
         = f.text_field :youtube_url, class:"input-box__url", placeholder:"type a Youtube url"
         = f.text_field :reason, class: 'input-box__reason', placeholder: 'type a reason'
         -# = f.label :video, class: 'input-box__image' do
