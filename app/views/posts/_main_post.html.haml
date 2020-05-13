@@ -9,7 +9,7 @@
         - @genre.users.each do |user|
           = "#{user.name} "
     .main-header__edit-btn
-      = link_to "#", class:"btn" do
+      = link_to edit_genre_path(@genre), class:"btn" do
         Edit
 
   .form
