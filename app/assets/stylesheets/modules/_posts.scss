@@ -64,7 +64,7 @@
         }
 
         &__genre-name{
-          font-size: 15px;
+          font-size: 30px;
           margin-bottom: 5px;
           color: $color1;
         }
@@ -142,12 +142,14 @@
           height: 50px;
           width: 100%;
           padding: 0 40px 0 10px;
+          margin: 1px;
         }
 
         &__reason{
           height: 50px;
           width: 100%;
           padding: 0 40px 0 10px;
+          margin: 1px;
         }
 
         &__image{
@@ -170,48 +172,44 @@
         background-color: transparent;
         cursor: pointer;
         color: $color1;
-        margin: 10px auto;
+        margin: 5px auto;
       }
     }
         
     .posts{
-      height: calc(100vh - 100px - 100px);
-      background-color: #eaeded;
-      padding: 20px 20px;
+      height: 600px;
+      background-color: white;
+      padding: 10px 20px;
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
 
-      .posts{
-        height: calc(100vh - 100px - 90px);
-        background-color: $color7;
-        padding: 35px 40px 0;
-  
-        .post{
-          .post__upper-info{
-            display: flex;
-            flex-direction: row;
-            margin-bottom: 12px;
-  
-            &__talker{
-              font-size: 16px;
-              color: $color4;
-            }
-  
-            &__date{
-              font-size: 12px;
-              color: $color5;
-            }
+      .post{
+        width: 600px;
+        height: 400px;
+        .post__upper-info{
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 12px;
+
+          &__talker{
+            font-size: 16px;
+            color: $color4;
           }
-  
-          &__text{
-            margin-bottom: 46px;
-            font-size: 14px;
-            color: $color8;
 
-            
+          &__date{
+            font-size: 12px;
+            color: $color5;
           }
         }
+
+        &__text{
+          margin-bottom: 10px;
+          font-size: 14px;
+          color: $color8;
+
+          
+        }
       }
-      }
+    }
   }
 }
