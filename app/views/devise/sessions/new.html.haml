@@ -11,12 +11,15 @@
           .field-label
             = f.label :email
           .field-input
-            = f.email_field :email, autofocus: true
+            = f.email_field :email, autofocus: true, value: "aaa@gmail.com"
           .field
             .field-label
               = f.label :password
               %i (英数字8文字以上)
             .field-input
-              = f.password_field :password, autocomplete: "off"
+              = f.password_field :password, autocomplete: "off", value: "aaaaaaa"
           .actions
             = f.submit "Log in", class: 'btn'
+          %p < 採用担当者様専用アカウント >
+          %p メール : aaa@gmail.com
+          %p パスワード : aaaaaaa
